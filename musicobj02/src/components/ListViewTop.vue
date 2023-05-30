@@ -70,7 +70,7 @@
 </template>
 <script>
 export default {
-    name: "listvietop",
+    name: "listviewtop",
     props:["playlist"]
 }
 </script>

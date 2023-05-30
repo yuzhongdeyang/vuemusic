@@ -12,7 +12,7 @@
                         <div class="name">{{ item.name }}</div>
                         <div class="count">
                             <svg class="icon" aria-hidden="true">
-                                 <use xlink:href="#icon-fanjutuijian"></use>
+                                 <use xlink:href="#icon-bofang1"></use>
                             </svg>
                             <span>{{ changeValue(item.playCount) }}</span>
                         </div>
@@ -51,7 +51,7 @@ export default{
         })
         onUpdated(()=>{
             var swiper = new Swiper("#musicSwiper",{
-                slidesPerView:4,//一屏显示几个滑块
+                slidesPerView:3,//一屏显示几个滑块
                 spaceBetween:10//每个滑块之间的间距
             })
         })
