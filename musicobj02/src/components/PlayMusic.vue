@@ -17,9 +17,9 @@
             </div>
         </div>
         <div  v-if="isLyric" class="playLyric" @click="isLyric= !isLyric">
-            离离原上草，一岁一枯荣。野火烧不尽，春风吹又生
+            {{ lyric }}
         </div>
-        <div class="playContent" @click="isLyric= !isLyric">
+        <div v-else class="playContent" @click="isLyric= !isLyric">
             <!-- class有active小白条落下 class没有active小白条抬起 -->
             <img class="needle" :class="{active: !abc}" src="@/assets/img/needle-ip6.png" alt="">
             <img class="disc" src="@/assets/img/disc-ip6.png" alt="">
@@ -60,7 +60,7 @@ export default {
         }
     },
     computed:{
-        ...mapState(["playCurrentIndex","playlist"])//当前播放音乐下标 当前播放音乐列表
+        ...mapState(["playCurrentIndex","playlist","lyric"])//当前播放音乐下标 当前播放音乐列表
     },
     methods:{
         tabMusic(num){
